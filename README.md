@@ -2,7 +2,7 @@
 
 The goal of this project was to build two machine learning models, a classification model and a clustering model, to help a bank predict customer churn and understand the demographics of the customers who churned.
 
-The data used in this project was collected from Kaggle.
+The data used in this project was collected from [Kaggle](https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset).
 
 The classification model was evaluated using accuracy, precision, F1 score and AUC as the metrics. The results showed that the model had an accuracy of 84%, precision of 62%, F1 score of 59% and AUC score of 84%. This indicates that the model is able to correctly predict 84% of the customers who are likely to churn and has a 62% chance of correctly identifying a customer who will churn.
 
