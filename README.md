@@ -17,7 +17,6 @@ Overall, this project provides valuable insights into the demographics of custom
 Link
 
 # [Prepossesing and Modeling](https://github.com/ngjance/bank_churn/blob/main/Codes/Bank%20Customer%20Churn%20Prediction%20-%202_Preprocessing_and_Modeling.ipynb)
-Link
 
 ### Base Models
 The base models include all the columns as features.
@@ -33,6 +32,17 @@ There shows signs of overfitting, hence we will reduce the features.
 ### Selecting the Features
 The features we selected are:
 estimated_salary, balance, age, credit_score, country x balance, products_number and gender
+<br><br>
+Our goal is to reduce Type 2 error or False Negatives False negative in our case will be customers whom we predicted will not churn, but in reality churned.
+
+We want to reduce such errors because if we predicted that a customer will not churn but in fact he / she churned, then we lost a customer.
+
+In the opposite case however, where we predicted that a customer will churn and the customer actually did not churn, we would spend resources/effort to try to retain the customer which could have been redirected.
+
+Hence, reducing type 2 error is more important as losing a customer cost more than spending resources on the wrong targeted customer.
+
+In another words, we want to predict the customer who will churn as accurately as possible. This will help us to direct resources to the right customers and help retain the customer. Therefore, precision is an important metric in our model.
+<br>
 
 |                               	|     LogisticRegression 	|       KNN   	|     Decision Tree 	|     Random Forest 	|     Bagging 	|     AdaBoost 	|       SVC   	|     XGBoost 	|     LightGBM    	|
 |:-----------------------------:	|:----------------------:	|:-----------:	|:-----------------:	|:-----------------:	|:-----------:	|:------------:	|:-----------:	|:-----------:	|:---------------:	|
