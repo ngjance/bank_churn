@@ -13,10 +13,10 @@ It should be noted that the results of this project may be limited by the qualit
 Overall, this project provides valuable insights into the demographics of customers who are likely to churn, which can be used by the bank to improve its customer retention strategies.
 
 
-# Data Cleaning and EDA
+# [Data Cleaning and EDA](https://github.com/ngjance/bank_churn/blob/main/Codes/Bank%20Customer%20Churn%20Prediction%20-%201_Data_Cleaning_and_EDA.ipynb)
 Link
 
-# Prepossesing and Modeling
+# [Prepossesing and Modeling](https://github.com/ngjance/bank_churn/blob/main/Codes/Bank%20Customer%20Churn%20Prediction%20-%202_Preprocessing_and_Modeling.ipynb)
 Link
 
 ### Base Models
@@ -85,7 +85,7 @@ We recommend to use LightGBM as the final model given that it gives the highest 
 
 
 
-# Clustering
+# [Clustering](https://github.com/ngjance/bank_churn/blob/main/Codes/Bank%20Customer%20Churn%20Prediction%20-%203_Clustering.ipynb)
 Link
 
 
