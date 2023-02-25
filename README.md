@@ -125,6 +125,7 @@ Contrary, the number of products and gender features have negative contributing 
 
 # [Clustering](https://github.com/ngjance/bank_churn/blob/main/Codes/Bank%20Customer%20Churn%20Prediction%20-%203_Clustering.ipynb)
 Link
+![image](https://user-images.githubusercontent.com/63915619/221347444-c8ce20b7-cf26-4a2a-add9-19137a81b7fa.png)
 
 
 # Demo
