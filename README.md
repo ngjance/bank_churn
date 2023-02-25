@@ -1,12 +1,13 @@
 # Executive Summary
 
-The goal of this project was to build two machine learning models, a classification model and a clustering model, to help a bank predict customer churn and understand the demographics of the customers who churned.
+The goal of this project is to help a bank predict which customers are likely to churn and understand the demographics of the customers who churned.
+This will help the bank to improve their retention strategy and policy across the different functions such as marketing, products and customer service.
 
 The data used in this project was collected from [Kaggle](https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset).
 
-The classification model was evaluated using accuracy, precision, F1 score and AUC as the metrics. The results showed that the model had an accuracy of 84%, precision of 62%, F1 score of 59% and AUC score of 84%. This indicates that the model is able to correctly predict 84% of the customers who are likely to churn and has a 62% chance of correctly identifying a customer who will churn.
+First, a classification model was built and evaluated using accuracy, precision, F1 score and AUC as the metrics. The results showed that the model had an accuracy of 84%, precision of 62%, F1 score of 59% and AUC score of 84%. This indicates that the model is able to correctly predict 84% of the customers who are likely to churn and has a 62% chance of correctly identifying a customer who will churn.
 
-The clustering model was used to group customers based on their demographic characteristics. The results showed that there were four main demographic groups of customers who churned: (1) middle-class customers, (2) familyman, (3) working women and (4) customers who don't save aka spenders.
+Next, a clustering model was used to group customers based on their demographic characteristics. The results showed that there were four main demographic groups of customers who churned: (1) middle-class customers, (2) familyman, (3) working women and (4) customers who don't save aka spenders.
 
 It should be noted that the results of this project may be limited by the quality and availability of the data used, as well as the assumptions made about the customers and their behavior. Additionally, there may be other factors not considered in this analysis that could impact customer churn.
 
@@ -70,9 +71,17 @@ We tried PolynomialFeatures and it did not significantly improve the models, hen
 
 
 ### GridSearch
-Finally, we used GridSearch to find the best parameters that give the best precision score.
-We are more concerned about precision score because 
+Finally, we used GridSearch to find the best parameters that give the best recall score followed by best accuracy score.
 
+Below is the best parameters for each model:
+
+| Model         	| Best Params for Recall Score                                                   	|
+|---------------	|--------------------------------------------------------------------------------	|
+| Random Forest 	| {'ccp_alpha': 0.001, 'criterion': 'entropy', 'max_depth': 30, 'n_estimators': 300}   	|
+| SVC           	| {'C': 2, 'decision_function_shape': 'ovo', 'degree': 1, 'gamma': 'auto'}       	|
+| Adaboost      	| {'learning_rate': 1, 'n_estimators': 400}                                      	|
+| XGBoost       	| {'eta': 0.3, 'gamma': 0, 'max_depth': 6}                                     	|
+| LightGBM      	| {'learning_rate': 0.1, 'max_depth': -1, 'n_estimators': 300, 'num_leaves': 31} 	|
 
 
 ### Final Models
@@ -80,19 +89,38 @@ The results after grid search is as below:
 
 |                             	| Random Forest 	|   SVC   	| AdaBoost 	| XGBoost 	| LightGBM    	|
 |:---------------------------:	|:-------------:	|:-------:	|:--------:	|:-------:	|:-----------:	|
-| Train Set   Accuracy        	|    0.85022    	| 0.80404 	|  0.83795 	| 0.94989 	|   0.94470   	|
-| Test Set   Accuracy         	|    0.80550    	|  0.7795 	|  0.80850 	| 0.84200 	|   0.84850   	|
-| Train Set   Precision Score 	|    0.84945    	| 0.80428 	|  0.84512 	| 0.96549 	|   0.96268   	|
-| Test Set   Precision Score  	|    0.50358    	| 0.46262 	|  0.50909 	| 0.60606 	|   0.62784   	|
-| Train Set   F1 Score        	|    0.85039    	| 0.80397 	|  0.83625 	| 0.94904 	|   0.94360   	|
-| Test F1   Set F1 Score      	|    0.59096    	| 0.57391 	|  0.59385 	| 0.58201 	|   0.59329   	|
+| Train Set   Accuracy        	|    0.85022    	| 0.80404 	|  0.83795 	| 0.94989 	|   0.96554   	|
+| Test Set   Accuracy         	|    0.80550    	|  0.7795 	|  0.80850 	| 0.84200 	|   0.83800   	|
+| Train Set   Precision Score 	|    0.84945    	| 0.80428 	|  0.84512 	| 0.96549 	|   0.98051   	|
+| Test Set   Precision Score  	|    0.50358    	| 0.46262 	|  0.50909 	| 0.60606 	|   0.59300   	|
+| Train Set Recall Score      	|    0.85132    	| 0.80365 	|  0.82756 	| 0.93313 	|   0.94997   	|
+| Test Set Recall Score       	|    0.71501    	| 0.75573 	|  0.71247 	| 0.55980 	|   0.55980   	|
+| Train Set   F1 Score        	|    0.85039    	| 0.80397 	|  0.83625 	| 0.94904 	|   0.96500   	|
+| Test F1   Set F1 Score      	|    0.59096    	| 0.57391 	|  0.59385 	| 0.58201 	|   0.57592   	|
 | AUC                         	|    0.85000    	| 0.83000 	|  0.85000 	| 0.83000 	|  0.84000    	|
 
-We recommend to use LightGBM as the final model given that it gives the highest accuracy score, precision score and F1 score.
+Given that our goal is to reduce type 2 error, recall score is the most important metric to us, followed by accuracy score.
+
+SVC gives the highest recall score and the lowest accuracy score. SVC also has slow performance if the dataset is huge, which is probable in a bank.
+
+Random Forest gives the second highest recall score and about 80.55% accuracy. Its AUC score is also higher than SVC. Thus, we will deploy Random Forest as our final model.
+
+### Random Forest - Final Select Model
+![image](https://user-images.githubusercontent.com/63915619/221340645-4aa06273-455b-4d25-8709-a377ad48ca4a.png)
 
 
 
+### Shap Explainer
+![image](https://user-images.githubusercontent.com/63915619/221340266-b2d9d8aa-30ba-478e-b6f8-ec40d32894e0.png)
 
+Using Shap, we see that age is the most important contributing feature to the model, followed by product_number and country x balance.
+
+
+![image](https://user-images.githubusercontent.com/63915619/221340307-81924c80-5daa-4a5b-a64d-beb49e9c29c3.png)
+
+Taking one specific client to look at, we see that age, country x balance, and balance are pushing the model towards the base value and the client is 76% likely to churn.
+
+Contrary, the number of products and gender features have negative contributing effect on him churning.
 
 
 # [Clustering](https://github.com/ngjance/bank_churn/blob/main/Codes/Bank%20Customer%20Churn%20Prediction%20-%203_Clustering.ipynb)
