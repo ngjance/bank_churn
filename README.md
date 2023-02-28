@@ -15,7 +15,36 @@ Overall, this project provides valuable insights into the demographics of custom
 
 
 # [Data Cleaning and EDA](https://github.com/ngjance/bank_churn/blob/main/Codes/Bank%20Customer%20Churn%20Prediction%20-%201_Data_Cleaning_and_EDA.ipynb)
-Link
+Using the free version of [atoti](https://www.atoti.io/), we ploted the below charts with ease to do a quick exploratory data analysis.
+
+![image](https://user-images.githubusercontent.com/63915619/221853724-ec255582-a5f1-4e9f-9623-27a54cd2457a.png)
+Customers who churn are generally younger.
+<br><br>
+
+![image](https://user-images.githubusercontent.com/63915619/221853862-b0c5084f-a806-445b-a184-43fade734576.png)
+Females who churn have a lower credit score than females who don't churn.
+Males who churn have a higher credit score than males who don't churn.
+<br><br>
+
+![image](https://user-images.githubusercontent.com/63915619/221854638-c5c1ea13-1470-48ec-b39d-ca0bccc7f2ed.png)
+Females who churn earn higher salary than females who don't churn.
+Males who churn earn lower salary than males who don't churn.
+In general, females earn lower salary than males, which could be the possible reason for the lower credit score.
+<br><br>
+
+![image](https://user-images.githubusercontent.com/63915619/221854812-a3b36d0b-f8a7-4425-9c78-abcdbf4156f3.png)
+Both females and male who churn have lower balances than those who don't churn.
+<br><br>
+
+![image](https://user-images.githubusercontent.com/63915619/221855337-d6827b08-4c5f-458f-8034-42cdce69805b.png)
+Both females and male who churn have lower tenure than those who don't churn.
+<br><br>
+
+![image](https://user-images.githubusercontent.com/63915619/221855434-bbbf3bbc-3510-476e-aa80-88626b373b6d.png)
+Males who do not churn hold the fewest number of products.
+<br><br>
+
+Note: The notebook is best viewed using Jupyter Lab.
 
 # [Prepossesing and Modeling](https://github.com/ngjance/bank_churn/blob/main/Codes/Bank%20Customer%20Churn%20Prediction%20-%202_Preprocessing_and_Modeling.ipynb)
 
@@ -124,8 +153,41 @@ Contrary, the number of products and gender features have negative contributing 
 
 
 # [Clustering](https://github.com/ngjance/bank_churn/blob/main/Codes/Bank%20Customer%20Churn%20Prediction%20-%203_Clustering.ipynb)
-Link
+We want to understand the demographics of all the customers who have churned and see if we can segment them.
+
+We do this by fitting KMeans. We will use both Elbow Curve and Silhouette analysis to give a suggested K.
+
+### Elbow Curve
+![image](https://user-images.githubusercontent.com/63915619/221851656-f64dde32-720d-46f8-8fd9-9ddb2068d8a8.png)
+
+### Silhouette
+![image](https://user-images.githubusercontent.com/63915619/221851806-6b742b9c-cdf5-429b-b36e-c28f033c14d7.png)
+
+All Ks have clusters with Silhouette score more than the average score of the dataset.
+
+Only K=2 has a more evenly spread-out clusters compare to K=4.
+
+Hence, we instantiated both k=2 and K=4 to see which give better defined clusters.
+
+K=4 gives more interpretable clusters with 'balance', 'products_number' and 'gender' the features that help to distinguish the clusters.
+
+
+### Final CLuster Model
+![image](https://user-images.githubusercontent.com/63915619/221859977-913aa896-1f4b-4376-aa00-2b1cef61f4af.png)
+Cluster 0 (Working Males): Male, minimum 45k balance, maximum 220k balance, average balance of 120k, mostly holds only 1 product and max 2 products
+
+Cluster 1 (Spenders): Less than 52k balance, average balance of 1.7k, mostly holds only 1 product and max 2 products
+
+Cluster 2 (Working Women): Female, minimum balance of 52k, maximum 230k balance, average balance of 120k, mostly holds only 1 product and max 2 products
+
+Cluster 3 (Young Singles): Average balance 87k, 25% of the group has zero balance, 50% of the group has more than 100k balance, mostly holds at least 3 product and max 4 products
+<br><br>
+
 ![image](https://user-images.githubusercontent.com/63915619/221347444-c8ce20b7-cf26-4a2a-add9-19137a81b7fa.png)
+
+<br><br>
+
+Note: The notebook is best viewed using Jupyter Lab.
 
 
 # Demo
