@@ -5,9 +5,9 @@ This will help the bank to improve their retention strategy and policy across th
 
 The data used in this project was collected from [Kaggle](https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset).
 
-First, a classification model was built and evaluated using accuracy, precision, F1 score and AUC as the metrics. The results showed that the model had an accuracy of 84%, precision of 62%, F1 score of 59% and AUC score of 84%. This indicates that the model is able to correctly predict 84% of the customers who are likely to churn and has a 62% chance of correctly identifying a customer who will churn.
+First, a classification model was built and evaluated using accuracy, recall, F1 score and AUC as the metrics. The results showed that the model had an accuracy of 81%, recall of 72%, F1 score of 59% and AUC score of 85%. This indicates that the model is able to correctly predict 81% of the customers who are likely to churn and has a 72% chance of correctly identifying a customer who will churn.
 
-Next, a clustering model was used to group customers based on their demographic characteristics. The results showed that there were four main demographic groups of customers who churned: (1) middle-class customers, (2) familyman, (3) working women and (4) customers who don't save aka spenders.
+Next, a clustering model was used to group customers based on their demographic characteristics. The results showed that there were four main demographic groups of customers who churned: (1) working males, (2) spenders, (3) working females and (4) young singles.
 
 It should be noted that the results of this project may be limited by the quality and availability of the data used, as well as the assumptions made about the customers and their behavior. Additionally, there may be other factors not considered in this analysis that could impact customer churn.
 
@@ -178,7 +178,7 @@ Cluster 0 (Working Males): Male, minimum 45k balance, maximum 220k balance, aver
 
 Cluster 1 (Spenders): Less than 52k balance, average balance of 1.7k, mostly holds only 1 product and max 2 products
 
-Cluster 2 (Working Women): Female, minimum balance of 52k, maximum 230k balance, average balance of 120k, mostly holds only 1 product and max 2 products
+Cluster 2 (Working Females): Female, minimum balance of 52k, maximum 230k balance, average balance of 120k, mostly holds only 1 product and max 2 products
 
 Cluster 3 (Young Singles): Average balance 87k, 25% of the group has zero balance, 50% of the group has more than 100k balance, mostly holds at least 3 product and max 4 products
 <br><br>
@@ -190,8 +190,10 @@ Cluster 3 (Young Singles): Average balance 87k, 25% of the group has zero balanc
 Note: The notebook is best viewed using Jupyter Lab.
 
 
-# Demo
-Link
+# [Demo](https://ngjance-bank-churn-bank-customer-churn-prediction-4-demo-elqwyt.streamlit.app/)
+Using Streamlit, we deploy the models to cloud so that business users can access and use the app.
+<br>
+![image](https://user-images.githubusercontent.com/63915619/222423703-57d497dd-246b-4f80-af2b-b548d6019ec4.png)
+<br><br>
 
-
-
+Note: This is the version 1 of the app and there may be more updates.
