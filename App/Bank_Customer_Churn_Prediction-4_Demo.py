@@ -9,10 +9,10 @@ import pickle
 #import the models
 from API import get_df, clustering_transform, predict_transform, cluster_plot
 
-with open("Model\Clustering.pkl", "rb") as to_read:
+with open("Model/Clustering.pkl", "rb") as to_read:
     cluster = pickle.load(to_read)
 
-with open("Model\lightgbm.pkl", "rb") as to_read:
+with open("Model/lightgbm.pkl", "rb") as to_read:
     model_clf = pickle.load(to_read)
 
 #set the page layout

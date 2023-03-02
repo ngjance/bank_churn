@@ -7,16 +7,16 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import OrdinalEncoder
 from sklearn.preprocessing import OneHotEncoder
 
-with open("Model\Clustering.pkl", "rb") as to_read:
+with open("Model/Clustering.pkl", "rb") as to_read:
     cluster = pickle.load(to_read)
 
-with open("Model\ss.pkl", "rb") as to_read:
+with open("Model/ss.pkl", "rb") as to_read:
     ss = pickle.load(to_read)
 
-with open("Model\enc.pkl", "rb") as to_read:
+with open("Model/enc.pkl", "rb") as to_read:
     enc = pickle.load(to_read)
 
-with open("Model\ohe.pkl", "rb") as to_read:
+with open("Model/ohe.pkl", "rb") as to_read:
     ohe = pickle.load(to_read)
 
 def get_df():
@@ -55,16 +55,16 @@ def cluster_plot(i):
 
     return X_final_i
 
-with open("Model\enc_clf.pkl", "rb") as to_read:
+with open("Model/enc_clf.pkl", "rb") as to_read:
     enc_clf = pickle.load(to_read)
 
-with open("Model\ohe_clf.pkl", "rb") as to_read:
+with open("Model/ohe_clf.pkl", "rb") as to_read:
     ohe_clf = pickle.load(to_read)
 
-with open("Model\ss_clf.pkl", "rb") as to_read:
+with open("Model/ss_clf.pkl", "rb") as to_read:
     ss_clf = pickle.load(to_read)
 
-with open("Model\lightgbm.pkl", "rb") as to_read:
+with open("Model/lightgbm.pkl", "rb") as to_read:
     model_clf = pickle.load(to_read)
 
 def predict_transform(customer_id):
