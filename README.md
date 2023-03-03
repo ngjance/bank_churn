@@ -26,12 +26,12 @@ Customers who churn and don't churn have the similar credit score
 <br><br>
 
 ![image](https://user-images.githubusercontent.com/63915619/222767951-b678aaed-1a5b-47d1-bb79-6235555699c4.png)
-Females who churn earn slightly higher salary than females who don't churn.
+Females who churn earn slightly higher salary than females who don't churn.<br>
 Salary doesn't seem to be a contributing factor on why males churn.
 <br><br>
 
 ![image](https://user-images.githubusercontent.com/63915619/222768114-5d2e42cb-5100-46a8-928c-eb7926e0f124.png)
-Both females and male who churn have higher balances than those who don't churn.
+Both females and male who churn have higher balances than those who don't churn.<br>
 Males also have higher balances compared to females.
 <br><br>
 
