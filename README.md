@@ -17,31 +17,30 @@ Overall, this project provides valuable insights into the demographics of custom
 # [Data Cleaning and EDA](https://github.com/ngjance/bank_churn/blob/main/Codes/Bank%20Customer%20Churn%20Prediction%20-%201_Data_Cleaning_and_EDA.ipynb)
 Using the free version of [atoti](https://www.atoti.io/), we ploted the below charts with ease to do a quick exploratory data analysis.
 
-![image](https://user-images.githubusercontent.com/63915619/221853724-ec255582-a5f1-4e9f-9623-27a54cd2457a.png)
-Customers who churn are generally younger.
+![image](https://user-images.githubusercontent.com/63915619/222766843-5d228b21-7074-4835-8ea3-a6c7575c9b4c.png)
+Customers who churn are generally older.
 <br><br>
 
-![image](https://user-images.githubusercontent.com/63915619/221853862-b0c5084f-a806-445b-a184-43fade734576.png)
-Females who churn have a lower credit score than females who don't churn.
-Males who churn have a higher credit score than males who don't churn.
+![image](https://user-images.githubusercontent.com/63915619/222766922-c2af9c38-05e0-4e10-b694-bc02618cf0d2.png)
+Customers who churn and don't churn have the similar credit score
 <br><br>
 
-![image](https://user-images.githubusercontent.com/63915619/221854638-c5c1ea13-1470-48ec-b39d-ca0bccc7f2ed.png)
-Females who churn earn higher salary than females who don't churn.
-Males who churn earn lower salary than males who don't churn.
-In general, females earn lower salary than males, which could be the possible reason for the lower credit score.
+![image](https://user-images.githubusercontent.com/63915619/222767951-b678aaed-1a5b-47d1-bb79-6235555699c4.png)
+Females who churn earn slightly higher salary than females who don't churn.
+Salary doesn't seem to be a contributing factor on why males churn.
 <br><br>
 
-![image](https://user-images.githubusercontent.com/63915619/221854812-a3b36d0b-f8a7-4425-9c78-abcdbf4156f3.png)
-Both females and male who churn have lower balances than those who don't churn.
+![image](https://user-images.githubusercontent.com/63915619/222768114-5d2e42cb-5100-46a8-928c-eb7926e0f124.png)
+Both females and male who churn have higher balances than those who don't churn.
+Males also have higher balances compared to females.
 <br><br>
 
-![image](https://user-images.githubusercontent.com/63915619/221855337-d6827b08-4c5f-458f-8034-42cdce69805b.png)
-Both females and male who churn have lower tenure than those who don't churn.
+![image](https://user-images.githubusercontent.com/63915619/222768349-6d2c6ef4-0411-4eb0-b6f5-f839c887fb97.png)
+Both females and male who churn have slightly lower tenure than those who don't churn.
 <br><br>
 
-![image](https://user-images.githubusercontent.com/63915619/221855434-bbbf3bbc-3510-476e-aa80-88626b373b6d.png)
-Males who do not churn hold the fewest number of products.
+![image](https://user-images.githubusercontent.com/63915619/222768452-efaf0c6e-8e2d-4c91-8094-a881fa0450a4.png)
+Males who churn hold the fewest number of products.
 <br><br>
 
 Note: The notebook is best viewed using Jupyter Lab.
